@@ -11,9 +11,9 @@
   -webkit-font-smoothing: antialiased;
   --ivory: #f8f5ef;
   --paper: #fbf9f5;
-  --maroon: #642d35;
-  --maroon-dark: #4a2028;
-  --gold: #ae9160;
+  --maroon: #35104f;
+  --maroon-dark: #240b38;
+  --gold: #c19a49;
   --ink: #302b28;
   --muted: #827a72;
   --line: #e6dfd5;
@@ -32,7 +32,7 @@ img { display: block; max-width: 100%; }
 .announcement strong { color: #e5ca9d; font-weight: 600; }
 .site-header { height: 83px; display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; padding: 0 6.3%; background: var(--paper); position: relative; z-index: 20; border-bottom: 1px solid rgba(89, 72, 55, .08); }
 .brand-lockup { border: 0; background: none; padding: 0; display: flex; align-items: center; gap: 10px; text-align: left; width: fit-content; }
-.brand-logo { width: 58px; height: 58px; display: block; object-fit: contain; flex: 0 0 auto; }
+.brand-logo { width: 62px; height: 62px; display: block; object-fit: contain; flex: 0 0 auto; }
 .brand-mark { width: 37px; height: 37px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); color: var(--maroon); font-size: 23px; position: relative; }
 .brand-mark span { font-family: sans-serif; font-size: 8px; position: absolute; right: 3px; top: 4px; color: var(--gold); }
 .brand-name { font-family: var(--serif); font-size: 14px; letter-spacing: .13em; color: var(--maroon); line-height: 1.15; white-space: nowrap; }
@@ -49,9 +49,9 @@ img { display: block; max-width: 100%; }
 .search-panel { position: absolute; z-index: 25; top: 114px; left: 0; right: 0; background: var(--paper); border-top: 1px solid var(--line); padding: 17px 9%; display: flex; align-items: center; gap: 14px; box-shadow: 0 12px 24px #2c201011; }
 .search-panel input { flex: 1; background: none; border: 0; outline: 0; color: var(--ink); font-size: 13px; }
 .text-button { border: 0; background: none; color: var(--maroon); font-size: 11px; }
-.hero { position: relative; height: min(660px, 65vw); min-height: 510px; background: #51403c; color: white; overflow: hidden; }
+.hero { position: relative; height: min(660px, 65vw); min-height: 510px; background: #35104f; color: white; overflow: hidden; }
 .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 43%; animation: hero-fade .8s ease both, gentle-zoom 18s ease-in-out infinite alternate; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(33, 21, 21, .72) 0%, rgba(39, 25, 23, .53) 38%, rgba(40, 23, 21, .08) 78%), linear-gradient(0deg, rgba(34, 20, 20, .2), transparent 35%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30, 11, 45, .76) 0%, rgba(43, 17, 60, .54) 38%, rgba(40, 23, 21, .08) 78%), linear-gradient(0deg, rgba(30, 11, 45, .2), transparent 35%); }
 .hero-content { position: absolute; top: 50%; left: 12.2%; transform: translateY(-45%); max-width: 600px; }
 .hero-kicker { font-size: 9px; letter-spacing: .25em; color: #ead9bd; display: flex; align-items: center; gap: 10px; margin: 0 0 27px; }
 .hero-kicker span { width: 24px; height: 1px; background: #c1a06d; }
@@ -292,9 +292,9 @@ img { display: block; max-width: 100%; }
 .checkout-button { width: 100%; }
 .continue-shopping { display: block; margin: 15px auto 0; color: var(--maroon); border: 0; border-bottom: 1px solid #bba78d; background: transparent; padding: 0 0 5px; font-size: 9px; }
 .wishlist-page > .product-grid { padding-top: 15px; }
-.about-hero { position: relative; height: 450px; background: #58443a; color: white; }
+.about-hero { position: relative; height: 450px; background: #35104f; color: white; }
 .about-hero > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-.about-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #291e1ed1, #2d211b45 75%); }
+.about-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #1e0b2dd1, #2d211b45 75%); }
 .about-hero > div:last-child { position: absolute; left: 12%; top: 50%; transform: translateY(-50%); }
 .about-hero h1 { font-size: clamp(44px, 6vw, 68px); }
 .about-story { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; padding-top: 96px; padding-bottom: 92px; }
@@ -316,6 +316,7 @@ img { display: block; max-width: 100%; }
 .contact-detail { display: flex; gap: 13px; align-items: flex-start; margin: 17px 0; }
 .contact-detail > span { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #e2d8ca; color: var(--gold); font-size: 15px; }
 .contact-detail p { color: #8c8176; font-size: 10px; line-height: 1.7; margin: 0; }
+.contact-detail a { color: inherit; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .contact-detail strong { color: #514740; font-weight: 600; }
 .contact-form { background: #f0ece4; padding: 30px 32px; }
 .contact-form > .eyebrow { margin-bottom: 8px; }
@@ -369,7 +370,7 @@ img { display: block; max-width: 100%; }
   .search-panel { top: 99px; padding: 14px 5%; }
   .hero { min-height: 565px; height: 77vh; max-height: 690px; }
   .hero-image { object-position: 61% center; }
-  .hero-overlay { background: linear-gradient(90deg, rgba(34, 21, 20, .73), rgba(38, 24, 21, .23)), linear-gradient(0deg, rgba(34, 20, 20, .35), transparent 55%); }
+  .hero-overlay { background: linear-gradient(90deg, rgba(30, 11, 45, .76), rgba(38, 24, 21, .23)), linear-gradient(0deg, rgba(30, 11, 45, .35), transparent 55%); }
   .hero-content { left: 7%; right: 5%; top: 47%; transform: translateY(-40%); }
   .hero h1 { font-size: clamp(45px, 12vw, 65px); }
   .hero-kicker { font-size: 8px; margin-bottom: 22px; }
@@ -405,7 +406,7 @@ img { display: block; max-width: 100%; }
   .price-row del, .discount { font-size: 8px; }
   .editorial-banner { height: 435px; }
   .editorial-banner > img { object-position: 59% center; }
-  .editorial-shade { background: linear-gradient(90deg, #271d1dd9, #30211f68 70%, #251b1b28); }
+  .editorial-shade { background: linear-gradient(90deg, #1e0b2dd9, #30211f68 70%, #251b1b28); }
   .editorial-content { left: 7%; right: 5%; }
   .editorial-content h2 { font-size: 43px; }
   .editorial-content p:not(.eyebrow) { font-size: 10px; }

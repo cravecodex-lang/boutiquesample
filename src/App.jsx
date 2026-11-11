@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
-const whatsappNumber = '919876543210'
+const whatsappNumber = '919080153051'
 
 const products = [
   {
@@ -221,9 +221,9 @@ function App() {
         <button className="icon-button mobile-menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
           <Icon name={menuOpen ? 'close' : 'menu'} />
         </button>
-        <button className="brand-lockup" onClick={() => navigate('home')} aria-label="Universe Boutique home">
-          <img className="brand-logo" src="/images/universe-boutique-logo.png" alt="" />
-          <span className="brand-name">UNIVERSE <i>BOUTIQUE</i></span>
+        <button className="brand-lockup" onClick={() => navigate('home')} aria-label="Sarah Boutique home">
+          <img className="brand-logo" src="/images/sarah-boutique-logo.png" alt="" />
+          <span className="brand-name">SARAH <i>BOUTIQUE</i></span>
         </button>
         <nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation">
           {navItems.map(([label, target]) => (
@@ -303,7 +303,7 @@ function HomePage({ heroSlide, setHeroSlide, navigate, chooseCategory, viewProdu
   return (
     <>
       <section className="hero">
-        <img key={heroSlides[heroSlide]} className="hero-image" src={heroSlide === 0 ? '/images/home-temple-banner.png' : imageUrl(heroSlides[heroSlide])} alt={heroSlide === 0 ? 'Model wearing a traditional saree at a temple' : 'Saree from the Universe Boutique collection'} fetchpriority="high" />
+        <img key={heroSlides[heroSlide]} className="hero-image" src={heroSlide === 0 ? '/images/home-temple-banner.png' : imageUrl(heroSlides[heroSlide])} alt={heroSlide === 0 ? 'Model wearing a traditional saree at a temple' : 'Saree from the Sarah Boutique collection'} fetchpriority="high" />
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="hero-kicker"><span /> THE ART OF THE DRAPE <span /></p>
@@ -375,11 +375,11 @@ function HomePage({ heroSlide, setHeroSlide, navigate, chooseCategory, viewProdu
       </section>
 
       <section className="section instagram-section">
-        <SectionHeading eyebrow="A LITTLE INSPIRATION" title="Life in a saree" copy="Beautifully and unapologetically you. Join us @universeboutique" link="Follow along" onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} />
+        <SectionHeading eyebrow="A LITTLE INSPIRATION" title="Life in a saree" copy="Beautifully and unapologetically you. Discover the Sarah Boutique edit." link="Follow along" onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} />
         <div className="instagram-grid">
           {['product-kanchipuram-orange', 'product-handloom-yellow', 'product-designer-blush', 'product-party-black', 'product-kanchipuram-orange'].map((image, index) => (
-            <button key={`${image}-${index}`} onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} aria-label="Open Universe Boutique on Instagram">
-              <img src={imageUrl(image, 500)} alt={`Universe Boutique saree inspiration ${index + 1}`} loading="lazy" /><span><Icon name="instagram" size={21} /></span>
+            <button key={`${image}-${index}`} onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} aria-label="Browse saree inspiration on Instagram">
+              <img src={imageUrl(image, 500)} alt={`Sarah Boutique saree inspiration ${index + 1}`} loading="lazy" /><span><Icon name="instagram" size={21} /></span>
             </button>
           ))}
         </div>
@@ -393,7 +393,7 @@ function ShopPage({ products: shownProducts, activeCategory, setActiveCategory, 
   const categories = ['All Sarees', ...collections.map((collection) => collection.name)]
   return (
     <div className="page-wrap shop-page">
-      <div className="page-heading"><p className="eyebrow">THE UNIVERSE COLLECTION</p><h1>Find your <em>forever saree.</em></h1><p>Thoughtful weaves for all the moments that make you, you.</p></div>
+      <div className="page-heading"><p className="eyebrow">THE SARAH COLLECTION</p><h1>Find your <em>forever saree.</em></h1><p>Thoughtful weaves for all the moments that make you, you.</p></div>
       <div className="shop-tools"><label className="shop-search"><Icon name="search" size={18} /><input placeholder="Search the collection" value={query} onChange={(event) => setQuery(event.target.value)} /><span>{shownProducts.length} pieces</span></label></div>
       <div className="shop-layout">
         <aside className="shop-sidebar"><p className="filter-heading">SHOP BY CATEGORY</p>{categories.map((category) => <button key={category} className={category === activeCategory ? 'filter-active' : ''} onClick={() => setActiveCategory(category)}>{category}<span>{category === 'All Sarees' ? products.length : products.filter((item) => item.category === category).length}</span></button>)}</aside>
@@ -410,14 +410,14 @@ function CollectionsPage({ chooseCategory }) {
   return (
     <div className="page-wrap collections-page">
       <div className="page-heading"><p className="eyebrow">A COLLECTION FOR EVERY CHAPTER</p><h1>Find the one that<br /><em>feels like you.</em></h1><p>Seven little worlds, each with a story woven into every thread.</p></div>
-      <div className="all-collections-grid">{collections.map((collection, index) => <button className="all-collection-card" key={collection.name} onClick={() => chooseCategory(collection.name)}><img src={imageUrl(collection.image, 1000)} alt={collection.name} loading={index > 2 ? 'lazy' : 'eager'} /><span className="all-collection-overlay" /><span className="all-collection-info"><small>0{index + 1} — UNIVERSE EDIT</small><strong>{collection.name}</strong><span>{collection.sub}</span><i>Explore edit <Icon name="arrow" size={15} /></i></span></button>)}</div>
+      <div className="all-collections-grid">{collections.map((collection, index) => <button className="all-collection-card" key={collection.name} onClick={() => chooseCategory(collection.name)}><img src={imageUrl(collection.image, 1000)} alt={collection.name} loading={index > 2 ? 'lazy' : 'eager'} /><span className="all-collection-overlay" /><span className="all-collection-info"><small>0{index + 1} — SARAH EDIT</small><strong>{collection.name}</strong><span>{collection.sub}</span><i>Explore edit <Icon name="arrow" size={15} /></i></span></button>)}</div>
     </div>
   )
 }
 
 function ProductPage({ product, quantity, setQuantity, addToCart, buyNow, toggleWishlist, wishlist }) {
   const saved = wishlist.some((item) => item.id === product.id)
-  const enquiry = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Universe Boutique, I'm interested in the ${product.name}. Could you share more details?`)}`
+  const enquiry = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Sarah Boutique, I'm interested in the ${product.name}. Could you share more details?`)}`
   return (
     <div className="page-wrap product-detail-page">
       <div className="breadcrumb"><span>Home</span><b>/</b><span>Shop</span><b>/</b><strong>{product.name}</strong></div>
@@ -474,7 +474,7 @@ function AboutPage({ navigate }) {
   return (
     <div className="about-page">
       <section className="about-hero"><img src={imageUrl('product-designer-blush')} alt="Handcrafted Indian textile in a quiet moment" /><div className="about-hero-shade" /><div><p className="eyebrow eyebrow-light">A NOTE FROM US</p><h1>We believe every<br />thread holds a <em>story.</em></h1></div></section>
-      <section className="about-story page-wrap"><div><p className="eyebrow">OUR LITTLE UNIVERSE</p><h2>Rooted in tradition.<br /><em>Made for you.</em></h2></div><div><p>Universe Boutique began with a simple feeling: the way a saree can make you feel completely, wonderfully yourself. Grounded in India's rich textile traditions, we bring together thoughtful weaves and pieces with a little magic in them.</p><p>We work with care, choose with intention, and believe that the things we wear should mean something. Every drape in our collection is an invitation to celebrate your story — in all its everyday and extraordinary moments.</p><button className="underlined-link" onClick={() => navigate('shop')}>Find your saree <Icon name="arrow" size={16} /></button></div></section>
+      <section className="about-story page-wrap"><div><p className="eyebrow">THE SARAH BOUTIQUE STORY</p><h2>Rooted in tradition.<br /><em>Made for you.</em></h2></div><div><p>Sarah Boutique began with a simple feeling: the way a saree can make you feel completely, wonderfully yourself. Grounded in India's rich textile traditions, we bring together thoughtful weaves and pieces with a little magic in them.</p><p>We work with care, choose with intention, and believe that the things we wear should mean something. Every drape in our collection is an invitation to celebrate your story — in all its everyday and extraordinary moments.</p><button className="underlined-link" onClick={() => navigate('shop')}>Find your saree <Icon name="arrow" size={16} /></button></div></section>
       <section className="about-values"><div><span>01</span><h3>Made with meaning</h3><p>We honour the hands, heritage and artistry behind every weave.</p></div><div><span>02</span><h3>Chosen with care</h3><p>A thoughtful edit, built around quality that feels as good as it looks.</p></div><div><span>03</span><h3>Yours, always</h3><p>Pieces to wear your way, and keep close for years to come.</p></div></section>
       <section className="about-cta"><p className="eyebrow">YOUR STORY, YOUR DRAPE</p><h2>There's a little <em>magic</em><br />in finding the one.</h2><button className="button button-dark" onClick={() => navigate('collections')}>Explore our collections <Icon name="arrow" size={16} /></button></section>
     </div>
@@ -485,7 +485,7 @@ function ContactPage() {
   const [sent, setSent] = useState(false)
   return (
     <div className="page-wrap contact-page">
-      <div className="contact-intro"><p className="eyebrow">WE'RE RIGHT HERE</p><h1>Let's make it<br /><em>a conversation.</em></h1><p>A question about a weave, a little styling help, or just want to say hello? We'd love to hear from you.</p><div className="contact-detail"><span><Icon name="pin" size={18} /></span><p><strong>Come say hello</strong><br />Chennai, Tamil Nadu, India</p></div><div className="contact-detail"><span>✧</span><p><strong>Write us a note</strong><br />hello@universeboutique.in</p></div><div className="contact-detail"><span>◷</span><p><strong>We're around</strong><br />Monday–Saturday, 10am–6pm IST</p></div></div>
+      <div className="contact-intro"><p className="eyebrow">WE'RE RIGHT HERE</p><h1>Let's make it<br /><em>a conversation.</em></h1><p>A question about a weave, a little styling help, or just want to say hello? We'd love to hear from you.</p><div className="contact-detail"><span><Icon name="pin" size={18} /></span><p><strong>Come say hello</strong><br />Chennai, Tamil Nadu, India</p></div><div className="contact-detail"><span>✧</span><p><strong>WhatsApp us</strong><br /><a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer">+91 90801 53051</a></p></div><div className="contact-detail"><span>◷</span><p><strong>We're around</strong><br />Monday–Saturday, 10am–6pm IST</p></div></div>
       <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setSent(true) }}><p className="eyebrow">SEND US A NOTE</p><h2>How can we help?</h2>{sent ? <div className="form-success"><span><Icon name="check" /></span><h3>Your note is on its way.</h3><p>Thank you for reaching out. We'll be in touch soon.</p><button type="button" className="underlined-link" onClick={() => setSent(false)}>Send another note <Icon name="arrow" size={15} /></button></div> : <><label>Your name<input required name="name" placeholder="How should we call you?" /></label><label>Email address<input required type="email" name="email" placeholder="you@example.com" /></label><label>What can we help with?<select defaultValue=""><option value="" disabled>Choose a topic</option><option>Product enquiry</option><option>Order support</option><option>Styling advice</option><option>Something else</option></select></label><label>Your message<textarea required name="message" rows="4" placeholder="Tell us a little more..." /></label><button className="button button-dark" type="submit">Send your note <Icon name="arrow" size={16} /></button><small>We’ll get back to you within one business day.</small></>}</form>
     </div>
   )
@@ -495,7 +495,7 @@ function Newsletter({ email, setEmail, subscribed, setSubscribed, showNotice }) 
   return (
     <section className="newsletter">
       <div><p className="eyebrow">LETTERS FROM OUR LITTLE WORLD</p><h2>A little beauty<br /><em>in your inbox.</em></h2><p>New arrivals, thoughtful stories, and the occasional something special.</p></div>
-      <form className="newsletter-form" onSubmit={(event) => { event.preventDefault(); if (!email.trim()) return; setSubscribed(true); showNotice('You’re on the list — welcome to our world!') }}><label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label><div><input id="newsletter-email" type="email" required placeholder="you@example.com" value={email} onChange={(event) => setEmail(event.target.value)} disabled={subscribed} /><button type="submit" disabled={subscribed}>{subscribed ? 'You’re on the list' : 'Join us'} <Icon name="arrow" size={16} /></button></div><small>{subscribed ? 'Thank you for joining our little world.' : 'By subscribing, you agree to receive notes from Universe Boutique.'}</small></form>
+      <form className="newsletter-form" onSubmit={(event) => { event.preventDefault(); if (!email.trim()) return; setSubscribed(true); showNotice('You’re on the list — welcome to our world!') }}><label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label><div><input id="newsletter-email" type="email" required placeholder="you@example.com" value={email} onChange={(event) => setEmail(event.target.value)} disabled={subscribed} /><button type="submit" disabled={subscribed}>{subscribed ? 'You’re on the list' : 'Join us'} <Icon name="arrow" size={16} /></button></div><small>{subscribed ? 'Thank you for joining our little world.' : 'By subscribing, you agree to receive notes from Sarah Boutique.'}</small></form>
       <span className="newsletter-ornament">✳</span>
     </section>
   )
@@ -505,12 +505,12 @@ function Footer({ navigate }) {
   return (
     <footer className="site-footer">
       <div className="footer-main">
-        <div className="footer-brand"><button className="brand-lockup footer-lockup" onClick={() => navigate('home')} aria-label="Universe Boutique home"><img className="brand-logo" src="/images/universe-boutique-logo.png" alt="" /><span className="brand-name">UNIVERSE <i>BOUTIQUE</i></span></button><p>A little world of beautiful sarees,<br />thoughtfully chosen for yours.</p><button className="footer-social" onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} aria-label="Instagram"><Icon name="instagram" size={19} /></button></div>
+        <div className="footer-brand"><button className="brand-lockup footer-lockup" onClick={() => navigate('home')} aria-label="Sarah Boutique home"><img className="brand-logo" src="/images/sarah-boutique-logo.png" alt="" /><span className="brand-name">SARAH <i>BOUTIQUE</i></span></button><p>A little world of beautiful sarees,<br />thoughtfully chosen for yours.</p><button className="footer-social" onClick={() => window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')} aria-label="Instagram"><Icon name="instagram" size={19} /></button></div>
         <div className="footer-column"><p>EXPLORE</p><button onClick={() => navigate('shop')}>Shop all</button><button onClick={() => navigate('collections')}>Collections</button><button onClick={() => navigate('about')}>Our story</button><button onClick={() => navigate('contact')}>Get in touch</button></div>
         <div className="footer-column"><p>HERE TO HELP</p><button onClick={() => navigate('contact')}>Shipping & delivery</button><button onClick={() => navigate('contact')}>Returns & exchanges</button><button onClick={() => navigate('contact')}>Care guide</button><button onClick={() => navigate('contact')}>FAQs</button></div>
         <div className="footer-note"><p className="eyebrow">A NOTE FROM OUR WORLD</p><h3>For the days that<br />become <em>stories.</em></h3><button className="underlined-link" onClick={() => navigate('about')}>A little about us <Icon name="arrow" size={15} /></button></div>
       </div>
-      <div className="footer-bottom"><span>© 2026 Universe Boutique. Made with care in India.</span><div><button onClick={() => navigate('contact')}>Privacy</button><button onClick={() => navigate('contact')}>Terms</button></div><span>Thoughtfully yours, always.</span></div>
+      <div className="footer-bottom"><span>© 2026 Sarah Boutique. Made with care in India.</span><div><button onClick={() => navigate('contact')}>Privacy</button><button onClick={() => navigate('contact')}>Terms</button></div><span>Thoughtfully yours, always.</span></div>
     </footer>
   )
 }
